@@ -36,13 +36,17 @@ INSERT INTO quartos(numero, servico_quarto, tipo_cama) VALUES
 (1, 'Serviço de quarto', 'Cama King Size'),
 (2, 'Serviço de quarto', 'Cama de casal'),
 (3, 'Serviço de quarto', 'Cama King Size'),
-(4, 'Serviço de quarto', 'Cama Queen Size');
+(4, 'Serviço de quarto', 'Cama Queen Size'),
+(5, 'Serviço de quarto', 'Cama King Size'),
+(6, 'Serviço de quarto', 'Cama King Size');
 
 INSERT INTO reservas(data_inicio_reserva, hora_reserva, data_termino_reserva, id_hospede, id_quarto) VALUES
 ('2021-01-01', '10:00:00', '2021-01-02', 1, 1),
 ('2021-01-01', '10:00:00', '2021-01-02', 2, 2),
 ('2021-01-01', '11:00:00', '2021-01-02', 3, 3),
 ('2021-01-01', '09:00:00', '2021-01-02', 4, 4);
+
+SELECT * FROM reservas;
 
 SELECT
     r.id_reserva,
@@ -61,8 +65,4 @@ JOIN
 JOIN
     hospedes h ON r.id_hospede = h.id_hospede
 WHERE
-    r.data_inicio_reserva = '2021-01-01'
-    AND r.hora_reserva = '10:00:00'
-    AND r.data_termino_reserva = '2021-01-02';  
-    
-SELECT
+    r.data_termino_reserva <= '2021-01-02';
