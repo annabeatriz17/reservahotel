@@ -83,10 +83,20 @@ LEFT JOIN
     hospedes h ON r.id_hospede = h.id_hospede;
 
 SELECT
+    r.id_reserva,
+    h.nome AS hospede,
+    h.email,
     q.numero AS quarto,
     q.servico_quarto,
-    q.tipo_cama
+    q.tipo_cama,
+    r.data_inicio_reserva,
+    r.hora_reserva,
+    r.data_termino_reserva
 FROM
     quartos q
+LEFT JOIN
+    reservas r ON q.id_quarto = r.id_quarto
+LEFT JOIN   
+    hospedes h ON r.id_hospede = h.id_hospede
 WHERE    
-    r.id_quarto IS NULL;
+    r.id_reserva IS NULL;
