@@ -41,8 +41,8 @@ INSERT INTO quartos(numero, servico_quarto, tipo_cama) VALUES
 INSERT INTO reservas(data_inicio_reserva, hora_reserva, data_termino_reserva, id_hospede, id_quarto) VALUES
 ('2021-01-01', '10:00:00', '2021-01-02', 1, 1),
 ('2021-01-01', '10:00:00', '2021-01-02', 2, 2),
-('2021-01-01', '11:00:00', '2021-01-02', 1, 1),
-('2021-01-01', '09:00:00', '2021-01-02', 1, 1);
+('2021-01-01', '11:00:00', '2021-01-02', 3, 3),
+('2021-01-01', '09:00:00', '2021-01-02', 4, 4);
 
 SELECT
     r.id_reserva,
