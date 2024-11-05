@@ -59,4 +59,10 @@ FROM
 JOIN 
     quartos q ON r.id_quarto = q.id_quarto
 JOIN
-    hospedes h ON r.id_hospede = h.id_hospede;
+    hospedes h ON r.id_hospede = h.id_hospede
+WHERE
+    r.data_inicio_reserva = '2021-01-01'
+    AND r.hora_reserva = '10:00:00'
+    AND r.data_termino_reserva = '2021-01-02';  
+    
+SELECT
