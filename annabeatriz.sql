@@ -7,3 +7,8 @@ CREATE TABLE hospedes(
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(50) UNIQUE NOT NULL
 );
+
+CREATE TABLE quartos(
+    id_quarto SERIAL PRIMARY KEY,
+    numero DECIMAL(3,0) UNIQUE NOT NULL
+);
