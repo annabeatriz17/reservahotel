@@ -10,7 +10,9 @@ CREATE TABLE hospedes(
 
 CREATE TABLE quartos(
     id_quarto SERIAL PRIMARY KEY,
-    numero DECIMAL(3,0) UNIQUE NOT NULL
+    numero DECIMAL(3,0) UNIQUE NOT NULL,
+    servico_quarto VARCHAR(50),
+    tipo_cama VARCHAR(50)
 );
 
 CREATE TABLE reservas(
@@ -29,3 +31,9 @@ INSERT INTO hospedes(nome, email) VALUES
 ('Matteo Balsano', 'matteo.balsano@gmail.com'),
 ('Ambar Smith', 'ambar.smith@gmail.com'),
 ('Simón Álvarez', 'simon.alvarez@gmail.com');
+
+INSERT INTO quartos(numero, servico_quarto, tipo_cama) VALUES
+(1, 'Serviço de quarto', 'Cama King Size'),
+(2, 'Serviço de quarto', 'Cama de casal'),
+(3, 'Serviço de quarto', 'Cama King Size'),
+(4, 'Serviço de quarto', 'Cama Queen Size');
