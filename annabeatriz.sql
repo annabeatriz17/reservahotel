@@ -37,3 +37,9 @@ INSERT INTO quartos(numero, servico_quarto, tipo_cama) VALUES
 (2, 'Serviço de quarto', 'Cama de casal'),
 (3, 'Serviço de quarto', 'Cama King Size'),
 (4, 'Serviço de quarto', 'Cama Queen Size');
+
+INSERT INTO reservas(data_inicio_reserva, hora_reserva, data_termino_reserva, id_hospede, id_quarto) VALUES
+('2021-01-01', '10:00:00', '2021-01-02', 1, 1),
+('2021-01-01', '10:00:00', '2021-01-02', 2, 2),
+('2021-01-01', '11:00:00', '2021-01-02', 1, 1),
+('2021-01-01', '09:00:00', '2021-01-02', 1, 1);
