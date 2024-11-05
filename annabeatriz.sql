@@ -24,3 +24,8 @@ CREATE TABLE reservas(
     CONSTRAINT fk_quarto FOREIGN KEY (id_quarto) REFERENCES quartos(id_quarto)
 );
 
+INSERT INTO hospedes(nome, email) VALUES
+('Luna Valente', 'luna.valente@gmail.com'),
+('Matteo Balsano', 'matteo.balsano@gmail.com'),
+('Ambar Smith', 'ambar.smith@gmail.com'),
+('Simón Álvarez', 'simon.alvarez@gmail.com');
