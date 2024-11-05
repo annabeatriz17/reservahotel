@@ -66,3 +66,18 @@ JOIN
     hospedes h ON r.id_hospede = h.id_hospede
 WHERE
     r.data_termino_reserva <= '2021-01-02';
+
+
+SELECT
+    r.id_reserva,
+    h.nome AS hospede,
+    h.email,
+    q.numero AS quarto,
+    q.servico_quarto,
+    q.tipo_cama
+FROM
+    quartos q
+LEFT JOIN
+    reservas r ON q.id_quarto = r.id_quarto
+LEFT JOIN
+    hospedes h ON r.id_hospede = h.id_hospede;
