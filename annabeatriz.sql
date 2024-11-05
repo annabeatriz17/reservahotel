@@ -43,3 +43,20 @@ INSERT INTO reservas(data_inicio_reserva, hora_reserva, data_termino_reserva, id
 ('2021-01-01', '10:00:00', '2021-01-02', 2, 2),
 ('2021-01-01', '11:00:00', '2021-01-02', 1, 1),
 ('2021-01-01', '09:00:00', '2021-01-02', 1, 1);
+
+SELECT
+    r.id_reserva,
+    h.nome AS hospede,
+    h.email,
+    q.numero AS quarto,
+    q.servico_quarto,
+    q.tipo_cama,
+    r.data_inicio_reserva,
+    r.hora_reserva,
+    r.data_termino_reserva
+FROM
+    reservas r
+JOIN 
+    quartos q ON r.id_quarto = q.id_quarto
+JOIN
+    hospedes h ON r.id_hospede = h.id_hospede;
